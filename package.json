@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "drag-and-drop-files": "0.0.1",
+    "earth-mesh": "^2.0.1",
+    "filereader-stream": "^1.0.0",
+    "gl-mat4": "^1.1.4",
+    "hyperlist-component": "^0.1.0",
+    "infinite-elements": "0.0.4",
+    "mgrs": "0.0.3",
+    "mixmap-tiles": "^1.1.1",
+    "next-tick": "^1.0.0",
+    "regl": "^1.3.0",
+    "resl": "^1.0.3",
+    "split2": "^2.1.1",
+    "webworkify": "^1.4.0",
+    "xhr": "^2.4.0",
+    "yo-yo": "^1.4.0"
+  },
+  "devDependencies": {
+    "choo": "^5.6.2",
+    "collect-stream": "^1.2.1",
+    "hyperdrive": "^9.12.0",
+    "hyperlog": "^4.12.1",
+    "level-browserify": "^1.1.1",
+    "pump": "^2.0.0",
+    "random-access-idb": "^1.0.4",
+    "subleveldown": "^2.1.0",
+    "to2": "^1.0.0"
+  }
+}
