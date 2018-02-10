@@ -26,5 +26,8 @@
     "random-access-idb": "^1.0.4",
     "subleveldown": "^2.1.0",
     "to2": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "budo example/main.js -d example/tiles"
   }
 }

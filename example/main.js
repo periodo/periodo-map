@@ -20,7 +20,7 @@ var pdb = periododb({
   db: level('pdb.db'),
   log: hyperlog(level('pdb.log'), { valueEncoding: 'json' })
 })
-app.route('/', require('./page.js'))
+app.route('*', require('./page.js'))
 
 var mixmap = require('mixmap')
 var regl = require('regl')
@@ -30,7 +30,7 @@ app.use(function (state, emitter) {
   state.mix = mixmap(regl, { extensions: ['oes_element_index_uint'] })
   state.pmap = pmap(state.mix, {
     layers: require('./layers.json'),
-    path: '/tiles'
+    path: 'tiles'
   })
   emitter.on('show', function (geoid) {
     collect(pdb.geometry(geoid), function (err, body) {
@@ -74,6 +74,7 @@ app.use(function (state, emitter) {
       emitter.emit('render')
       next()
     }))
+    emitter.emit('render')
   })
   emitter.on('elapsed', function (type, ms) {
     console.log(type + ': ' + ms + ' ms')
